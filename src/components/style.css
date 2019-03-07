@@ -1,0 +1,25 @@
+.margin5 {
+    margin: 5px 0px;
+}
+
+.bold {
+     font-weight: bold;
+}
+
+.skills {
+    margin: 8px -2px;
+}
+
+.skillLabel {
+    margin-bottom: 3px !important;
+}
+
+body {
+    background-image: url(/images/background.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 40px 0px;
+}
