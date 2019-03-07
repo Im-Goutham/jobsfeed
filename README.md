@@ -29,5 +29,6 @@ To run the test cases:
 
 ## Live url 
 
-byjus-challenge.surge.sh
+[http://byjus-challenge.surge.sh](http://byjus-challenge.surge.sh)
+
 
