@@ -9,7 +9,8 @@ class JobsList extends Component {
     super(props);
     this.state = {
         jobsfeed: props.jobsfeed,
-        selectedSkills: props.selectedSkills
+        selectedSkills: props.selectedSkills,
+        selectedLocations: props.selectedLocations
     }
   }
 
@@ -30,7 +31,7 @@ class JobsList extends Component {
               jobsfeed.map((job,key)=>{
                 let {title,applylink,jd,companyname,location,experience,salary,type,skills,startdate,enddate,created,source,timestamp} = job;
                  skills = skills.split(', ');
-                   return   <Card key={key} raised={true} >
+                   return   <Card key={key} raised={true} className="jobcard">
                    <Card.Content>
                      <Card.Header>{title}</Card.Header>
                      <Card.Meta>{companyname}</Card.Meta>
@@ -38,8 +39,8 @@ class JobsList extends Component {
                          <div className='skills'>
                         {
                            skills.length > 0 ? (
-                            skills.map((skill)=>{
-                                 return  <Fragment>
+                            skills.map((skill,key2)=>{
+                                 return  <Fragment key={key2}>
                                         {
                                             skill ?  <Label className='skillLabel' as='a'>{skill}</Label> : null
                                         }

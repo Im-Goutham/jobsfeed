@@ -50,20 +50,35 @@ class PageHeader extends Component {
      <Grid columns={3} stackable textAlign='center'>
      <Grid.Row verticalAlign='middle'>
        <Grid.Column>
-         <Dropdown 
-              onChange={this.handleSkillChange}
-              placeholder='Keywords or Skills' fluid multiple search selection options={skills} />
+         {
+             skills.length > 0 ? (
+                <Dropdown 
+                onChange={this.handleSkillChange}
+                placeholder='Keywords or Skills' fluid multiple search selection options={skills} />
+             ) : null
+         }
+         
        </Grid.Column>
 
        <Grid.Column>
-       <Dropdown 
-              onChange={this.handleLocationChange}
-              placeholder='Select Location' fluid multiple search selection options={locations} />
+       {
+            locations &&  locations.length > 0 ? (
+                <Dropdown 
+                onChange={this.handleLocationChange}
+                placeholder='Select Location' fluid multiple search selection options={locations} />
+             ) : null
+         }
+   
        </Grid.Column>
        <Grid.Column>
-        <Dropdown 
-                  onChange={this.handleExperienceChange}
-                  placeholder='Select Experience' fluid search selection options={options} />
+       {
+             options.length > 0 ? (
+              <Dropdown 
+              onChange={this.handleExperienceChange}
+              placeholder='Select Experience' fluid search selection options={options} />
+             ) : null
+         }
+      
        </Grid.Column>
      </Grid.Row>
    </Grid>
