@@ -1,6 +1,6 @@
 
 
-## Intructions
+## Instructions
 
 This is project is created using React js Framework.
 
